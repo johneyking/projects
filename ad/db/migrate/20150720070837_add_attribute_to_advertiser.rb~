@@ -1,0 +1,11 @@
+class AddAttributeToAdvertiser < ActiveRecord::Migration
+  def change
+  	add_column :advertiser, :advertiser_id, :integer
+  	add_column :advertiser, :name, :string
+  	add_column :advertiser, :email, :string
+  	add_column :advertiser, :phone, :string
+  	add_column :advertiser, :account, :string
+  	add_column :advertiser, :password, :string
+  	add_column :advertiser, :count, :integer
+  end
+end

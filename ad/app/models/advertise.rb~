@@ -1,0 +1,4 @@
+class Advertise < ActiveRecord::Base
+	belongs_to :advertiser, inverse_of: :advertises
+        
+end

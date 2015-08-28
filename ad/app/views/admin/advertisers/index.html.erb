@@ -1,0 +1,28 @@
+
+<%= form_tag selected_admin_advertisers_path do %>
+<%= select_tag(:option, options_for_select([['advertiser_id', 'advertiser_id'], ['name', "name"], ['email', 'email'], ['phone', 'phone'], ['account', 'account'], ['password','password'], ['count', 'count']] )) %>
+<%= text_field_tag "keyword" %>
+<%= submit_tag "seach" %>
+<% end %>
+<table>
+<tr>
+<th>name</th>
+<th>advertiser_id</th>
+<th>email</th>
+<th>phone</th>
+<th>account</th>
+<th>password</th>
+<th>count</th>
+</tr>
+<% @advertisers.each do |advertiser| %>
+<tr>
+<td><%= advertiser.name %></td>
+<td><%= advertiser.advertiser_id %></td>
+<td><%= advertiser.email %></td>
+<td><%= advertiser.phone %></td>
+<td><%= advertiser.account %></td>
+<td><%= advertiser.password %></td>
+<td><%= advertiser.count %></td>
+</tr>
+<% end %>
+</table>
